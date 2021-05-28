@@ -26,12 +26,14 @@ const App = () => {
 
     return (
         ....
-        <BlogWriter finalNodes={setNodes} />
+        <BlogWriter finalNodes={setNodes} placeHolder={"Type here..."}/>
     )
 }
 export default App;
 ```
 The property **finalNodes** is used to get html string from the library and store it to your current variable. In this example it will get stored in **nodes** variable.
+
+The **placeHolder** property is to set default value on your write pad. 
 
 After getting your html string, you can store it to your database. 
 
