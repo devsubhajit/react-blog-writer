@@ -51,6 +51,12 @@ There is a little on this section. Mainly on primary colors and width and height
 }
 ```
 
+A sample image has been provided here for a look.
+
+![Image of Sample](https://github.com/devsubhajit/react-blog-writer/blob/master/readmeSupport/Screenshot%202021-05-28%20at%2023.16.30.png)
+
+*Please check common css conflicts, as this library contains many form fields*
+
 This library is using a **react-color-selector**. If you want to use this library seperately here in your application here what you can do.
 
 ```
