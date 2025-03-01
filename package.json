@@ -1,6 +1,6 @@
 {
     "name": "react-blog-writer",
-    "version": "1.3.1",
+    "version": "1.3.3",
     "description": "",
     "main": "./lib/BlogWriter.js",
     "license": "MIT",

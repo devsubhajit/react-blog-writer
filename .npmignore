@@ -1,5 +1,5 @@
-src
-webpack.config.js
-.babelrc
+# src
+# webpack.config.js
+# .babelrc
 .eslintrc.js
 readmeSupport

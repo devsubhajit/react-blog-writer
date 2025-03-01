@@ -1,0 +1,294 @@
+.editor_container {
+    position: relative;
+    width: var(--writer-width);
+    height: var(--writer-height);
+    border: 1px solid #ababab;
+}
+.editor_container > .editorAttrs {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: center;
+}
+.editor_container > .editorAttrs > .btns {
+    background-color: transparent;
+    border: 1px solid var(--writer-primary);
+    padding: 3px;
+    color: var(--writer-primary);
+    border-radius: 3px;
+    float: none;
+    margin-right: 6px;
+    line-height: 1px;
+}
+.editor_container > .editorAttrs > .btns:hover,
+.editor_container > .editorAttrs > .btns.active {
+    background-color: var(--writer-primary);
+    color: #fff;
+}
+.editor_container > .writePad {
+    width: 100%;
+    height: calc(100% - 100px);
+    background-color: #fbfbfb;
+    padding: 10px 20px;
+    box-shadow: inset 0px 0px 7px #d2d2d2;
+    text-align: left;
+    box-sizing: border-box;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.color_popup {
+    width: 233px;
+    height: 363px;
+    overflow: visible;
+    z-index: 1;
+    position: absolute;
+    top: 74px;
+    left: auto;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+.color_popup > div {
+    width: 233px;
+    height: 363px;
+    overflow: hidden;
+}
+
+.color_popup .picker_switch {
+    width: 100% !important;
+}
+.color_popup .picker_switch li {
+    height: 30px !important;
+    line-height: 20px !important;
+}
+
+.colorSubmit {
+    width: 73px;
+    height: 32px;
+    position: absolute;
+    top: auto;
+    left: -6px;
+    right: 0;
+    bottom: 45px;
+    margin: auto;
+    background: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    opacity: 1;
+    /* transition: opacity 0.4s ease; */
+}
+.cancelSubmit {
+    width: 29px;
+    height: 29px;
+    position: absolute;
+    top: auto;
+    left: -122px;
+    right: 0;
+    bottom: 47px;
+    margin: auto;
+    background: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    opacity: 1;
+}
+
+.edit_input {
+    position: absolute;
+    top: 47px;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    padding: 10px 0;
+    text-align: center;
+    background-color: #ffffff;
+    overflow: hidden;
+    font-size: 14px;
+    box-shadow: 1px 0px 5px #cacaca;
+}
+
+.edit_input span {
+    font-size: 14px;
+    color: var(--writer-primary);
+}
+.edit_input input {
+    height: 26px;
+    border-color: var(--writer-primary);
+    border-width: 1px;
+    width: 50%;
+}
+
+.edit_input > button {
+    background-color: transparent;
+    border: 1px solid var(--writer-primary);
+    font-size: 12px;
+    padding: 3px 6px;
+    color: var(--writer-primary);
+    border-radius: 2px;
+    margin-left: 6px;
+    cursor: pointer;
+    position: relative;
+}
+.edit_input > button:hover {
+    background-color: var(--writer-primary);
+    color: #fff;
+}
+.edit_input > button.active {
+    background-color: var(--writer-primary);
+    color: #fff;
+}
+
+.title-picker {
+    width: 200px;
+    height: 200px;
+    overflow: visible;
+    background-color: #fbfbfb;
+    border: 1px solid var(--writer-primary);
+    position: absolute;
+    top: 54px;
+    left: auto;
+    right: 10px;
+}
+.title-picker::after {
+    content: "";
+    position: absolute;
+    top: -14px;
+    left: 7px;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 14px solid var(--writer-primary);
+}
+.title-picker > div {
+    width: 200px;
+    height: 200px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.title-picker > div > ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.title-picker > div > ul > li {
+    display: block;
+    border-bottom: 1px solid #ababab;
+    text-align: left;
+    text-indent: 10px;
+}
+
+.imgcontaner {
+    width: 100%;
+    height: auto;
+    margin: auto;
+    display: block;
+}
+.imgcontaner img {
+    max-width: 100%;
+}
+
+
+input[type=range]{
+    /* fix for FF unable to apply focus style bug  */
+    border: 1px solid white; 
+
+    /*required for proper track sizing in FF*/
+    width: 300px;
+}
+
+input[type=range]::-moz-range-track {
+    width: 300px;
+    height: 5px;
+    background: #ddd;
+    border: none;
+    border-radius: 3px;
+}
+
+input[type=range]::-moz-range-thumb {
+    border: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: var(--writer-primary);
+}
+
+/*hide the outline behind the border*/
+input[type=range]:-moz-focusring{
+    outline: 1px solid white;
+    outline-offset: -1px;
+}
+
+input[type=range]:focus::-moz-range-track {
+    background: #ccc;
+}
+
+input[type=range]{
+    -webkit-appearance: none;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    width: 300px;
+    height: 5px;
+    background: #ddd;
+    border: none;
+    border-radius: 3px;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: var(--writer-primary);
+    margin-top: -4px;
+}
+
+input[type=range]:focus {
+    outline: none;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #ccc;
+}
+
+
+input[type=range]::-ms-track {
+    width: 300px;
+    height: 5px;
+    
+    /*remove bg colour from the track, we'll use ms-fill-lower and ms-fill-upper instead */
+    background: transparent;
+    
+    /*leave room for the larger thumb to overflow with a transparent border */
+    border-color: transparent;
+    border-width: 6px 0;
+
+    /*remove default tick marks*/
+    color: transparent;
+}
+input[type=range]::-ms-fill-lower {
+    background: #777;
+    border-radius: 10px;
+}
+input[type=range]::-ms-fill-upper {
+    background: #ddd;
+    border-radius: 10px;
+}
+input[type=range]::-ms-thumb {
+    border: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: var(--writer-primary);
+}
+input[type=range]:focus::-ms-fill-lower {
+    background: #888;
+}
+input[type=range]:focus::-ms-fill-upper {
+    background: #ccc;
+}

@@ -1,8 +1,8 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
-/src
-.babelrc
-webpack.config.js
+# /src
+# .babelrc
+# webpack.config.js
 # dependencies
 /node_modules
 /.pnp
